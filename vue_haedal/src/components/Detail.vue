@@ -1,10 +1,12 @@
 <template>
     <div>
-        <div>{{data.writer}}</div>
-        <div>{{data.title}}</div>
-        <div>{{data.content}}</div>
-        <button @click="updateData">수정</button>
-        <button @click="deleteData">삭제</button>
+        <h2 class="de_title">{{data.title}}</h2>
+        <div class="de_writer">{{data.writer}}</div>
+        <div class="de_content">{{data.content}}</div>
+        <div class="btnWrap">
+            <a href="javascript:;" @click="updateData" class="btnAdd btn">수정</a>
+            <a href="javascript:;" @click="deleteData" class="btn">삭제</a>
+        </div>
     </div>
 </template>
 
@@ -37,3 +39,11 @@ export default {
     }
 }
 </script>
+<style>
+    .de_title{text-align: left; height: 20px;}
+    .de_writer{text-align: left;}
+    .btnWrap{text-align:center; margin:20px 0 0 0;}
+    .btnWrap a{margin:0 10px;}
+    .btnAdd {background:#43b984}
+    .btnDelete{background:#f00;}
+</style>
