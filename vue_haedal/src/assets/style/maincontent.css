@@ -1,0 +1,49 @@
+#mainContent {
+  display: inline-grid;
+  grid-template-columns: 20vw 20vw 20vw;
+  grid-template-rows: 25vh 25vh 25vh;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+#research {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-color: #D3D3D3;
+}
+
+#apply {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  background-color: #D3D3D3;
+}
+
+#notice {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-color: #D3D3D3;
+}
+
+#calendar {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-color: #D3D3D3;
+}
+
+#hbNotice {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-color: #D3D3D3;
+}
+
+#deptNotice {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background-color: #D3D3D3;
+}
+
+#hbCyber {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  background-color: #D3D3D3;
+}
