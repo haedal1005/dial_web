@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Read from '@/components/board/Read'
 import Create from '@/components/board/Create'
 import Detail from '@/components/board/Detail'
-import main from '../main.vue'
+import mainContent from '../components/mainview/mainContent.vue'
 import SignIn from '../components/mainview/SignIn.vue';
 import SignUp from '../components/mainview/SignUp.vue';
 
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: "/",
       name: 'main',
-      component: main
+      component: mainContent
     },
     {
       path: "/SignIn",

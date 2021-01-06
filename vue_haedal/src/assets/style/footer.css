@@ -1,4 +1,6 @@
 Footer {
+  height: 5vh;
+  border-top: 1px solid gray;
   width:100%;
   display:inline-block;
   background: white;
