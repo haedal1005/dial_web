@@ -13,8 +13,7 @@
             </tr>
         </table>
         <div class="btnWrap">
-        <a href="javascript:;" @click="write" class=" btnAdd btn">글쓰기
-        </a>
+        <p><a href="javascript:;" @click="write" class=" btnAdd btn">글쓰기</a></p>
         </div>
     </div>
 </template>
@@ -31,7 +30,7 @@ export default {
     methods: {
         write(){
             this.$router.push({
-                path: 'create'
+                path: 'read/create'
             })
         },
         detail(index){
@@ -57,7 +56,7 @@ export default {
     .re_title{width: 70%;}
     .re_writer{width: 20%;}
     .btnWrap{text-align:center; margin:20px 0 0 0;}
-	.btnWrap a{margin:0 10px; float:right;}
-    .btnAdd {background:#43b984}
+	.btnWrap a{margin:0 10px; float:right; color:#eee;}
+    .btnAdd {background:#43b984;}
     
 </style>

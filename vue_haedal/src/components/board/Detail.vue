@@ -25,7 +25,7 @@ export default {
         deleteData(){
             data.splice(this.index, 1)
             this.$router.push({
-                path: '/'
+                path: '/read'
             })
         },
         updateData(){
@@ -43,7 +43,8 @@ export default {
     .de_title{text-align: left; height: 20px;}
     .de_writer{text-align: left;}
     .btnWrap{text-align:center; margin:20px 0 0 0;}
-    .btnWrap a{margin:0 10px;}
+    .btnWrap a{margin:0 10px; display:inline-block;}
+    .btn{padding:10px; background:#34445c; color:#fff;}
     .btnAdd {background:#43b984}
     .btnDelete{background:#f00;}
 </style>

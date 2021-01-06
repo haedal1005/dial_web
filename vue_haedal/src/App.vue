@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <Header />
-      <router-view/>
+    <router-view/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from "./components/layout/Header.vue"
+import Header from "@/components/layout/Header.vue"
+import Footer from "@/components/layout/Footer.vue"
 
 export default {
   name: 'App',
   components:{
     Header,
+    Footer
   }
 }
 </script>
@@ -39,7 +42,7 @@ a{text-decoration:none;}
 .tbAdd td textarea{width:100%; min-height:300px; padding:10px; box-sizing:border-box;}
 .btnWrap{text-align:center; margin:20px 0 0 0;}
 .btnWrap a{margin:0 10px;}
-.btnAdd {background:#43b984}
+.btnAdd {background:#43b984; padding:10px;}
 .btnDelete{background:#f00;}
 </style>
 

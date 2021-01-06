@@ -53,58 +53,62 @@ export default{
     methods: {
         fnList(){
             this.$router.push({
-                path: '/'
+                path: '/read'
             })
         },
         write(){
             if(!this.writer){
                 alert("글쓴이를 입력해 주세요");
             }
-            if(!this.title){
+            else if(!this.title){
                 alert("제목을 입력해 주세요");
             }
-            if(!this.content){
+            else if(!this.content){
                 alert("내용을 입력해 주세요");
             }
-            this.data.push({
-                writer: this.writer,
-                title: this.title,
-                content: this.content,
-            })
-            this.$router.push({
-                path: '/'
-            })
+            else{
+                this.data.push({
+                    writer: this.writer,
+                    title: this.title,
+                    content: this.content,
+                })
+                this.$router.push({
+                    path: '/read'
+                })
+            }
         },
         update(){
             if(!this.writer){
                 alert("글쓴이를 입력해 주세요");
             }
-            if(!this.title){
+            else if(!this.title){
                 alert("제목을 입력해 주세요");
             }
-            if(!this.content){
+            else if(!this.content){
                 alert("내용을 입력해 주세요");
             }
-            data[this.index].writer = this.writer
-            data[this.index].title = this.title
-            data[this.index].content = this.content
-            this.$router.push({
-                path:'/'
-            })
+            else{
+                data[this.index].writer = this.writer
+                data[this.index].title = this.title
+                data[this.index].content = this.content
+                this.$router.push({
+                    path:'/read'
+                })
+            }
         }
     }
 }
 </script>
 
 <style scoped>
-	/* .tbAdd{border-top:1px solid #888;}
+	.tbAdd{border-top:1px solid #888;}
     .tbAdd th{border-bottom:1px solid #eee; padding:5px 0; color:#43b984;}
     .tbAdd td{border-bottom:1px solid #eee; padding:5px 0;}
 	.tbAdd td{padding:10px 10px; box-sizing:border-box; border-left:1px solid #eee;}
 	.tbAdd td input{width:100%; min-height:30px; box-sizing:border-box; padding:0 10px;}
 	.tbAdd td textarea{width:100%; min-height:300px; padding:10px; box-sizing:border-box;}
 	.btnWrap{text-align:center; margin:20px 0 0 0;}
-	.btnWrap a{margin:0 10px;}
+	.btnWrap a{margin:0 10px; display:inline-block;}
 	.btnAdd {background:#43b984}
-	.btnDelete{background:#f00;} */
+	.btnDelete{background:#f00;}
 </style>

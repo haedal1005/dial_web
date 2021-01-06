@@ -1,0 +1,84 @@
+.loginbox {
+  border: 1px solid #ccc;
+  display: grid;
+  grid-template-areas:
+  'logo logo logo',
+  'SignInId SignInId SignInId',
+  'SignInPw SignInPw SignInPw',
+  'SignInbtn SignInbtn SignInbtn',
+  'chk chk chk',
+  'search  search  search';
+}
+
+.loginbox h1 {
+  grid-area: logo;
+  background-color: white;
+  background-repeat: no-repeat;
+}
+
+#SignInId{
+  grid-area: SignInId;
+  width: 450px;
+  height: 45px;
+}
+
+​ #SignInPw {
+  grid-area: SignInPw;
+  width: 300px;
+  height: 50px;
+}
+
+#SignInbtn {
+  grid-area: SignInbtn;
+  width: 450px;
+  height: 45px;
+  border: none;
+  background-color: #44dd66;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+​ .chk {
+  grid-area: chk;
+  text-align: right;
+}
+
+.chk label {
+}
+
+​ .search {
+  grid-area: search;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search span {
+  font-size: 11px;
+}
+
+.search a {
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+​ .btnwrap {
+  width: 100%;
+  text-align: center;
+}
+
+.btnwrap label {
+}
+
+.btnwrap a {
+  width: 130px;
+  height: 35px;
+}
