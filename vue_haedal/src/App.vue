@@ -66,9 +66,10 @@ a {
 }
 
 a:visited{
-  text-decoration: none;
   color:#646464;
 }
+
+a
 
 .btn {
   padding: 10px;
