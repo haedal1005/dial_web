@@ -52,7 +52,7 @@ export default {
       writer: index !== undefined ? data[index].writer : "",
       title: index !== undefined ? data[index].title : "",
       content: index !== undefined ? data[index].content : "",
-      password: index !== undefined ? data[index].password : ""
+      password: index !== undefined ? "****" : ""
     }
   },
   methods: {
@@ -92,13 +92,17 @@ export default {
       } else if (!this.password) {
         alert("비밀번호를 입력해 주세요");
       } else {
-        data[this.index].writer = this.writer
-        data[this.index].title = this.title
-        data[this.index].content = this.content
-        data[this.index].password = this.password
-        this.$router.push({
-          path: '/read'
-        })
+        if(data[this.index].password == this.password){
+          data[this.index].writer = this.writer
+          data[this.index].title = this.title
+          data[this.index].content = this.content
+          this.$router.push({
+            path: '/read'
+          })
+        }
+        else{
+          alert("비밀번호가 다릅니다.")
+        }
       }
     }
   }
