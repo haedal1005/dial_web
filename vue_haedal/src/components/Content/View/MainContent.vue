@@ -37,5 +37,5 @@ export default {
 </script>
 
 <style>
-@import '../../assets/style/maincontent.css';
+@import '../../../assets/style/maincontent.css';
 </style>

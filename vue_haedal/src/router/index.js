@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Read from '@/components/board/Read'
-import Create from '@/components/board/Create'
-import Detail from '@/components/board/Detail'
-import mainContent from '../components/mainview/mainContent.vue'
-import SignIn from '../components/mainview/SignIn.vue';
-import SignUp from '../components/mainview/SignUp.vue';
+import Read from '../components/Content/Board/Read.vue'
+import Create from '../components/Content/Board/Create.vue'
+import Detail from '../components/Content/Board/Detail.vue'
+import mainContent from '../components/Content/View/MainContent.vue'
+import SignIn from '../components/Content/View/SignIn.vue'
+import SignUp from '../components/Content/View/SignUp.vue'
 
 Vue.use(Router)
 
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: "/",
       name: 'main',
-      component: mainContent
+      component:mainContent
     },
     {
       path: "/SignIn",
