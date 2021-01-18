@@ -26,5 +26,5 @@ export default {}
 </script>
 
 <style>
-@import '../../assets/style/signin.css';
+@import '../../../assets/style/signin.css';
 </style>
