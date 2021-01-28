@@ -1,28 +1,35 @@
 <template>
-    <div class="SignInBox">
-      <h1>DIAL</h1>
-      <form>
-        <input type="text" id="SignInId" placeholder="아이디"><br>
-        <input type="password" id="SignInPw" placeholder="비밀번호"><br>
-        <input type="submit" id="SignInBtn" value="로그인">
-      </form>
-      <div>
-        <input type="checkbox" id="saveId">
-        <label for="saveId">아이디 저장</label>
-        <hr>
-      </div>
-      <div class="search">
-        <a href="#">아이디 찾기</a>
-        <a href="#">비밀번호 찾기</a>
-      </div>
-      <div class="SignUp">
-        <a href="#">회원가입</a>
-      </div>
+<div class="SignInContent">
+  <h1>회원 로그인</h1>
+  <form id="SignInForm">
+    <div class="inputArea" id="idArea">
+      <input type="text" id="id" class="inputTag" placeholder="아이디">
     </div>
+    <div class="inputArea" id="pwArea">
+      <input type="password" id="pw" class="inputTag" placeholder="비밀번호">
+    </div>
+    <input type="submit" id="SignInBtn" value="로그인">
+  </form>
+  <div class="findArea">
+    <a href="#">아이디 찾기</a>
+    <span class="bar">|</span>
+    <a href="#">비밀번호 찾기</a>
+    <span class="bar">|</span>
+    <a href="#" @click="SignUp">회원가입</a>
+  </div>
+</div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    SignUp() {
+      this.$router.push({
+        path: '/SignUp'
+      })
+    }
+  }
+}
 </script>
 
 <style>

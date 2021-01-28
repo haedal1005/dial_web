@@ -1,8 +1,9 @@
 <template>
 <footer>
-  <p>Copyrightⓒ2020. DIAL LAB. ALL RIGHT RESERVED.</p>
+  <p>Copyright &copy; {{ new Date().getFullYear() }} DIAL LAB. ALL RIGHT RESERVED</p>
 </footer>
 </template>
+
 <script>
 
 </script>
