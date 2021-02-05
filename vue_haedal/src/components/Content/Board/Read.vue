@@ -2,14 +2,14 @@
     <div>
         <table class="tbAdd">
             <tr>
-                <td class="re_content">내용</td>
+                <td class="re_content">번호</td>
                 <td class="re_title">제목</td>
                 <td class="re_writer">글쓴이</td>
             </tr>
-            <tr :key="index" v-for="(value, index) in data" @click="detail(index)">
-                <td>{{value.content}}</td>
-                <td class="value_title">{{value.title}}</td>
-                <td>{{value.writer}}</td>
+            <tr :key="i" v-for="i in userList.length" @click="detail(userList[i-1].b_id)">
+                <td>{{ userList[i-1].b_id }}</td>
+                <td class="value_title">{{ userList[i-1].b_title }}</td>
+                <td>{{ userList[i-1].b_name }}</td>
             </tr>
         </table>
         <div class="btnWrap">
@@ -18,33 +18,56 @@
     </div>
 </template>
 <script>
-import data from '@/data'
+import http from "../../../services/http-common.js"
 
 export default {
     name: 'Read',
+    // beforeRouteEnter('Read', 'Create', )
     data() {
         return {
-            data: data
+            userList: [],
+            // name: '',
+            // title: '',
+            // content: '',
+            // pw: '',
+
+            // updateId:'',
+            // updateName: '',
+            // updateTitle: '',
+            // updateContent: '',
         }
     },
     methods: {
+        getRead() {
+            http
+                .get("/board")
+                .then(Response => (this.userList = Response.data))
+                .catch(error => {
+                    console.log(error);
+                });
+        },
         write(){
             this.$router.push({
                 path: 'read/create'
             })
         },
-        detail(index){
+        detail(id){
+            // console.log(index);
             this.$router.push({
                 name: 'Detail',
                 params: {
-                    contentId: index
+                    contentId: id
                 }
             })
         },
         m_over(){
             text-decora
+        },
+        },
+        mounted() {
+            console.log("호출");
+            this.getRead();
         }
-    }
 }
 </script>
 

@@ -38,7 +38,7 @@ export default new Router({
       component: Create
     },
     {
-      path: '/read/detail/:contentId',
+      path: '/read/detail/:contentId?',
       name: 'Detail',
       component: Detail
     }
